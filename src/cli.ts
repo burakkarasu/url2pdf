@@ -1,4 +1,4 @@
-import { parseArgs } from 'node:util';
+import { parseArgs, styleText } from 'node:util';
 import { Paper } from './types.js';
 import { chromium } from 'playwright';
 import { generatePDF } from './pdf.js';
@@ -19,9 +19,12 @@ const {
 const url = positionals[0];
 const outputPath = positionals[1];
 const v = values.paper.toUpperCase();
-console.log(v);
 if (v != 'A4' && v != 'A5') {
-  throw new Error('Paper must be A4 or A5');
+  console.log(styleText(
+    'red',
+    `Invalid paper input: ${values.paper}. Paper must be A4 or A5`
+  ));
+  process.exit(1);
 }
 const paper = v as Paper;
 
