@@ -3,15 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "pdf": "node --import tsx ./src/cli.ts",
-    "test": "playwright test"
+    "pdf": "node --import tsx ./src/cli.ts"
   },
-  "keywords": [
-    "playwright",
-    "pdf",
-    "cli"
-  ],
-  "author": "",
+  "author": "Burak",
   "license": "ISC",
   "description": "Generate print-styled PDFs from URLs using Playwright.",
   "devDependencies": {

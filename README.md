@@ -1,5 +1,5 @@
 ## Produce PDF from webpage
 
 ### Usage
-* `npm install`
-* `npm run pdf -- [url] [outputPath] <paper>`
+* `docker build -t url2pdf .`
+* `docker run --rm -v "$PWD:/out" url2pdf "[url]" "/out/[outputFileName]" <paper>`
