@@ -6,17 +6,19 @@
     "pdf": "node --import tsx ./src/cli.ts",
     "test": "playwright test"
   },
-  "keywords": ["playwright", "pdf", "cli"],
+  "keywords": [
+    "playwright",
+    "pdf",
+    "cli"
+  ],
   "author": "",
   "license": "ISC",
   "description": "Generate print-styled PDFs from URLs using Playwright.",
   "devDependencies": {
-    "@playwright/test": "^1.56.1",
     "@types/node": "^24.9.1",
     "tsx": "^4.19.1"
   },
   "dependencies": {
-    "commander": "^12.1.0",
     "playwright": "^1.56.1"
   }
 }
