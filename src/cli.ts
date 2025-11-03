@@ -19,10 +19,10 @@ const {
 const url = positionals[0];
 const outputPath = positionals[1];
 const v = values.paper.toUpperCase();
-if (v != 'A4' && v != 'A5') {
+if (v != 'A4' && v != 'A5' && v != 'CUSTOM') {
   console.log(styleText(
     'red',
-    `Invalid paper input: ${values.paper}. Paper must be A4 or A5`
+    `Invalid paper input: ${values.paper}. Paper must be A4, A5, or custom`
   ));
   process.exit(1);
 }

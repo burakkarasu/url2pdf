@@ -1,4 +1,4 @@
-export type Paper = 'A4' | 'A5';
+export type Paper = 'A4' | 'A5' | 'CUSTOM';
 
 export type Layout = {
   scale: number;
