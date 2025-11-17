@@ -32,7 +32,7 @@ const browser = await chromium.launch({ headless: true });
 try {
   const context = await browser.newContext({ acceptDownloads: true });
   const page = await context.newPage();
-  await page.goto(url, { waitUntil: 'networkidle' });
+  await page.goto(url, { waitUntil: 'networkidle', timeout: 120000 });
   await generatePDF(page, outputPath, paper);
   console.log(`Saved PDF to ${outputPath}`);
 } catch (err) {
